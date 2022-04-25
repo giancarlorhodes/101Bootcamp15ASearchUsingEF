@@ -18,14 +18,22 @@ namespace _101Bootcamp15ASearchUsingEF
 
                 //context.Students.Add(std);
                 //context.SaveChanges();
+                
 
+                // TODO : search for customer and employee table from NORTHWIND
 
                 var custs = context.Customers.Select(row => row).ToList();
 
+                Console.WriteLine("-------------------- CUSTOMERS -----------------------");
                 foreach (var item in custs)
                 {
                     Console.WriteLine("Contact Name: {0}", item.ContactName);
                 }
+
+                var employees = context.Employees.Select(row => row).ToList();
+
+
+
              
             }
 
